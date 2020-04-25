@@ -1,0 +1,168 @@
+@import "constants";
+
+.main-group .main-side {
+  width: $main-right;
+  float: right;
+  background-color: #fff;
+  .title {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    .title-item1 {
+      float: left;
+      line-height: 40px;
+    }
+    .title-item2 {
+      float: right;
+      line-height: 40px;
+      a {
+        color: #5c87d9;
+        font-size: 14px;
+      }
+    }
+  }
+  .img {
+    height: 132px;
+    width: 100%;
+    background: url("../image/l4.min.jpg");
+  }
+  .follow {
+    overflow: hidden;
+    height: 202px;
+    width: 100%;
+    .follow-left {
+      float: left;
+      height: 100%;
+      width: 210px;
+      .follow-item {
+        line-height: 54px;
+        height: 62px;
+        width: 100%;
+        background: url("../image/xuebi.min.png") no-repeat;
+        a {
+          margin-left: 80px;
+          color: #555555;
+          font-size: 14px;
+        }
+      }
+      .follow-item2 {
+        background-position-y: -68px;
+      }
+      .follow-item3 {
+        background-position-y: -136px;
+      }
+    }
+    .follow-right {
+      float: right;
+      height: 100%;
+      width: 146px;
+      .share {
+        img {
+          height: 85px;
+          width: 85px;
+          margin: 0 auto;
+          display: block;
+        }
+        div {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .hot {
+    height: 103px;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    .hot-article {
+      float: left;
+      width: 207px;
+      .article-footer {
+        margin-top: 12px;
+        span {
+          font-size: 12px;
+        }
+        .author {
+          margin-left: 20px;
+        }
+      }
+      a {
+        color: #555555;
+      }
+    }
+    .hotimg {
+      float: right;
+      img {
+        height: 70px;
+        width: 100px;
+      }
+    }
+  }
+}
+.main-group {
+  margin: auto;
+  width: $pageWidth;
+  overflow: hidden;
+  margin-top: 80px;
+  .main {
+    float: left;
+    height: 500px;
+    width: 798px;
+    .payinfo-img {
+      height: 202px;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .payinfo-detail {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #fff;
+      overflow: hidden;
+      li {
+        border: 1px solid #aaaba6;
+        margin-left: 20px;
+        height: 200px;
+        width: 350px;
+        overflow: hidden;
+        float: left;
+        margin-top: 20px;
+        .img {
+          height: 100%;
+          width: 20%;
+          float: left;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .detail {
+          overflow: hidden;
+          float: left;
+          width: 80%;
+          height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          .item {
+            color: #aaaba6;
+            font-size: 14px;
+            margin-top: 20px;
+          }
+          .price {
+            float: right;
+            margin-top: 100px;
+          }
+        }
+      }
+    }
+  }
+}

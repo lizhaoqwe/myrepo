@@ -1,0 +1,89 @@
+{% extends 'cms/base_cms.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/cms_banners.min.css' %}">
+    <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'js/art-template/template-web.js' %}"></script>
+    <script src="{% static 'js/cms_banners.min.js' %}"></script>
+    <script id="add-banners" type="text/html">
+    {% verbatim %}
+        {{ if banner }}
+        <div class="col-md-12 banner-item" data-banner-id="{{ banner.id }}">
+        {{ else }}
+        <div class="col-md-12 banner-item">
+        {{ /if }}
+            <div class="box box-primary" style="">
+            <form role="form" style="overflow: hidden;">
+              <div class="box-body" style="">
+                <div class="body-header">
+                    {{ if banner }}
+                        <span class="iteml">优先级:{{banner.priority}}</span>
+                    {{ else }}
+                        <span class="iteml">优先级:0</span>
+                    {{ /if }}
+                    <div class="close-icon fa fa-close banner-close">
+                    </div>
+                </div>
+
+                <div class="body-loop">
+                    <input type="file" id="addimg">
+                    {{ if banner }}
+                        <div class="loop-img">
+                            <img src="{{banner.image_url}}" alt="">
+                        </div>
+                    {{ else }}
+                        <div class="loop-img">
+                            <img src="/static/image/banners.min.png" alt="">
+                        </div>
+                    {{ /if }}
+                    <div class="loop-content">
+                        {{ if banner }}
+                            <div class="input-up">
+                                <input type="text" name="priority" placeholder="优先级" value="{{ banner.priority }}">
+                            </div>
+                            <div class="input-down">
+                                <input type="text" name="link-addr" placeholder="跳转连接" value="{{ banner.link_to }}">
+                            </div>
+                        {{ else }}
+                            <div class="input-up">
+                                <input type="text" name="priority" placeholder="优先级">
+                            </div>
+                            <div class="input-down">
+                                <input type="text" name="link-addr" placeholder="跳转连接">
+                            </div>
+                        {{ /if }}
+
+                    </div>
+                </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer" style="float: right">
+                <button type="submit" class="btn btn-primary" id="save_btn">保存</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    {% endverbatim %}
+    </script>
+{% endblock %}
+{% block h1 %}
+    轮播图管理
+{% endblock %}
+
+{% block content %}
+    <div class="cms-header">
+        <div class="button">
+            <button>
+                <i class="fa fa-plus"></i>
+                添加轮播图
+            </button>
+        </div>
+        <ul class="warning-content">
+            <li>支持JPG,GIF,PNG格式，最多可上传六张</li>
+            <li>比例4:1，宽度在800px以上，5m以内</li>
+        </ul>
+    </div>
+    <div class="row">
+
+    </div>
+{% endblock %}

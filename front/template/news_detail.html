@@ -1,0 +1,148 @@
+{% extends 'front_base.html' %}
+{% block title %}
+    新闻详情页
+{% endblock %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/news_detail.min.css' %}">
+<script src="{% static 'js/art-template/template-web.js' %}"></script>
+<script src="{% static 'js/news_detail.min.js' %}"></script>
+<script id="comment-item" type="text/html">
+{% verbatim %}
+<ul>
+    <li>
+        <div class="touxiang">
+            <img src="https://n.sinaimg.cn/sports/crawl/58/w550h308/20200413/9e67-isehnni8240379.jpg" alt="">
+        </div>
+        <div class="name">
+            {{ comment.author.username }}
+        </div>
+        <div class="time">
+            {{ comment.pub_time }}
+        </div>
+    </li>
+    <li class="comment-content">
+       <div class="content">
+           {{ comment.content }}
+       </div>
+    </li>
+</ul>
+{% endverbatim %}
+</script>
+{% endblock %}
+{% block content %}
+<div class="main-group">
+    <div class="news-main">
+        <h2>{{ news.title }}</h2><span class="count">浏览次数：{{ view_counts.view_count }}</span>
+        <div class="item">
+            <div class="item-lf">
+                <span>{{ news.author.username }}</span>
+                <span>{{ news.pub_time }}</span>
+                <span class="warning">{{ news.category.name }}</span>
+            </div>
+            <div class="item-rt">
+                <span class="share">分享至</span>
+                <span class="share-sina">
+
+                </span>
+                <span class="share-wechat">
+
+                </span>
+            </div>
+
+        </div>
+        <div class="img">
+            <img src="{{news.thumbnail}}" alt="">
+        </div>
+        <div class="content-detail">
+            {{ news.content|safe }}
+        </div>
+        <div class="comment">
+            <h4>文章评论</h4>
+            <textarea name="" id="" cols="106" rows="10" placeholder="立即登录，参与评论~" class="comment-content"></textarea>
+            <button class="commentBtn" data-news-id="{{ news.pk }}">评论</button>
+        </div>
+        <div class="comment-detail">
+            {% for com in comments %}
+            <ul>
+                <li>
+                    <div class="touxiang">
+                        <img src="https://n.sinaimg.cn/sports/crawl/58/w550h308/20200413/9e67-isehnni8240379.jpg" alt="">
+                    </div>
+                    <div class="name">
+                        {{ com.author.username }}
+                    </div>
+                    <div class="time">
+                        {{ com.pub_time }}
+                    </div>
+                </li>
+                <li class="comment-content">
+                   <div class="content">
+                       {{ com.content }}
+                   </div>
+                </li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="main-side">
+        <div class="title">
+            <div class="title-item1">在线课堂</div>
+            <div class="title-item2"><a href="">更多</a></div>
+        </div>
+        <div class="img">
+
+        </div>
+        <div class="title">
+            <div class="title-item1">
+                关注小饭桌
+            </div>
+        </div>
+        <div class="follow">
+            <div class="follow-left">
+                <div class="follow-item follow-item1">
+                    <a href="">
+                        小饭桌创业课堂
+                    </a>
+                </div>
+                <div class="follow-item follow-item2">
+                    <a href="">
+                        小饭桌创业课堂
+                    </a>
+                </div>
+                <div class="follow-item follow-item3">
+                    <a href="">
+                        小饭桌创业课堂
+                    </a>
+                </div>
+            </div>
+            <div class="follow-right">
+                <div class="share">
+                    <img src="{% static 'image/share.min.jpg' %}" alt="">
+                    <div>扫码关注小饭桌</div>
+                    <div>微信公众平台</div>
+                    <div>xfz007</div>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            热门推荐
+        </div>
+        <div class="hot">
+            <div class="hot-article">
+                <h4><a href="">
+                    王健林卖掉进军海外首个项目:17亿售伦敦...
+                </a></h4>
+                <div class="article-footer">
+                    <span>深度报道</span>
+                    <span class="author">admin</span>
+                    <span>04-04 18:45:49</span>
+                </div>
+
+            </div>
+            <div class="hotimg">
+                <img src="{% static 'image/l4.min.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

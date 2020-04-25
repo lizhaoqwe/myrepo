@@ -1,0 +1,167 @@
+.itemActive {
+    border-bottom: 2px solid #5c87d9;
+    box-sizing: border-box;
+}
+.wrapper-group {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    .auth-group {
+        width: 300px;
+        height: 265px;
+        margin: auto;
+        margin-top: 100px;
+        overflow: hidden;
+        background-color: #fff;
+        position: relative;
+        .auth-header {
+            padding: 10px;
+            box-sizing: border-box;
+            height: 30px;
+            width: 300px;
+            overflow: hidden;
+            .close {
+                float: right;
+                font-size: 5px;
+                color: #aaaba6;
+            }
+            .close:hover {
+                cursor: pointer;
+            }
+        }
+        .item {
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            .item-left {
+                height: 30px;
+                line-height: 30px;
+                float: left;
+            }
+            .item-right {
+                line-height: 30px;
+                float: right;
+                height: 30px;
+            }
+            .item-left:hover {
+                cursor: pointer;
+            }
+            .item-right:hover {
+                cursor: pointer;
+            }
+        }
+        .auth {
+            position: absolute;
+            left: 0;
+            overflow: hidden;
+            width: 600px;
+            li {
+                padding: 10px;
+                padding-top: 0;
+                box-sizing: border-box;
+                width: 300px;
+                background-color: #fff;
+                float: left;
+            }
+            .login {
+                height: 185px;
+                .input-auth {
+                    margin-top: 20px;
+                    height: 30px;
+                    input {
+                        border: 1px solid #aaaba6;
+                        height: 100%;
+                        width: 100%;
+                        padding-left: 20px;
+                        box-sizing: border-box;
+                    }
+                }
+                .remember {
+                    margin-top: 10px;
+                    font-size: 12px;
+                    height: 20px;
+                    line-height: 20px;
+                    input {
+                        float: left;
+                        height: 20px;
+                        line-height: 20px;
+                    }
+                    div {
+                        margin-left: 6px;
+                        float: left;
+                        line-height: 20px;
+                    }
+                }
+                .login-btn {
+                    margin-top: 10px;
+                    height: 35px;
+                    width: 100%;
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        background-color: #5c87d9;
+                        color: #fff;
+                    }
+                    input:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+            .register {
+                span {
+                    float: right;
+                    height: 30px;
+                    width: 35%;
+                    margin-top: 20px;
+                    img {
+                        height: 30px;
+                        width: 100%;
+                    }
+                }
+                input {
+                    border: 1px solid #aaaba6;
+                    height: 30px;
+                    width: 100%;
+                    padding-left: 20px;
+                    box-sizing: border-box;
+                    margin-top: 20px;
+                }
+                .register-btn {
+                    height: 35px;
+                    width: 100%;
+                    background-color: #5c87d9;
+                    color: #fff;
+                    margin-top: 10px;
+                }
+                .register-btn:hover {
+                    cursor: pointer;
+                }
+                .code {
+                    width: 60%;
+                }
+                .message {
+                    width: 60%;
+                    float: left;
+                }
+                .message-btn {
+                    float: right;
+                    height: 22px;
+                    width: 30%;
+                    margin-top: 20px;
+                    background-color: #5c87d9;
+                    color: #fff;
+                    padding: 4px;
+                }
+                span:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}

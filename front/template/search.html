@@ -1,0 +1,124 @@
+{% extends 'front_base.html' %}
+{% block title %}
+    搜索
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/main_side.min.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="main-group">
+<!--侧边栏-->
+        <div class="main">
+            <div class="search-group">
+                <div class="input">
+                <input type="text" name="search">
+            </div>
+                <div class="button">
+                <button>搜索</button>
+            </div>
+            </div>
+            <div class="title">
+                热门推荐
+            </div>
+            <div class="news-detail">
+				<ul>
+					<li>
+						<div class="img">
+							<a href="">
+								<img src="{% static 'image/l5.min.jpg' %}" alt="">
+							</a>
+						</div>
+						<div class="news-detail-item">
+							<h2><a href="">王健林卖掉进军海外首个项目:17亿售伦敦ONE六成股权</a></h2>
+							<p class="item1"><a href="">外界关于万达出售此前在海外投资项目的消息一直不断</a></p>
+							<p class="news-footer">
+								<span>深度报道</span>
+								<span class="author">admin</span>
+								<span class="time">20-4-4 18:07:56</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<a href="">
+								<img src="{% static 'image/l5.min.jpg' %}" alt="">
+							</a>
+						</div>
+						<div class="news-detail-item">
+							<h2><a href="">王健林卖掉进军海外首个项目:17亿售伦敦ONE六成股权</a></h2>
+							<p class="item1"><a href="">外界关于万达出售此前在海外投资项目的消息一直不断</a></p>
+							<p class="news-footer">
+								<span>深度报道</span>
+								<span class="author">admin</span>
+								<span class="time">20-4-4 18:07:56</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+        </div>
+		<div class="main-side">
+			<div class="title">
+				<div class="title-item1">在线课堂</div>
+				<div class="title-item2"><a href="">更多</a></div>
+			</div>
+			<div class="img">
+
+			</div>
+			<div class="title">
+				<div class="title-item1">
+					关注小饭桌
+				</div>
+			</div>
+			<div class="follow">
+				<div class="follow-left">
+					<div class="follow-item follow-item1">
+						<a href="">
+							小饭桌创业课堂
+						</a>
+					</div>
+					<div class="follow-item follow-item2">
+						<a href="">
+							小饭桌创业课堂
+						</a>
+					</div>
+					<div class="follow-item follow-item3">
+						<a href="">
+							小饭桌创业课堂
+						</a>
+					</div>
+				</div>
+				<div class="follow-right">
+					<div class="share">
+						<img src="{% static 'image/share.min.jpg' %}" alt="">
+						<div>扫码关注小饭桌</div>
+						<div>微信公众平台</div>
+						<div>xfz007</div>
+					</div>
+				</div>
+			</div>
+			<div class="title">
+				热门推荐
+			</div>
+			<div class="hot">
+				<div class="hot-article">
+					<h4><a href="">
+						王健林卖掉进军海外首个项目:17亿售伦敦...
+					</a></h4>
+					<div class="article-footer">
+						<span>深度报道</span>
+						<span class="author">admin</span>
+						<span>04-04 18:45:49</span>
+					</div>
+
+				</div>
+				<div class="hotimg">
+					<img src="{% static 'image/l4.min.jpg' %}" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,331 @@
+@import "constants";
+.main-group {
+  width: $pageWidth;
+  margin: 0 auto;
+  margin-top: 80px;
+  overflow: hidden;
+  .news-main {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 798px;
+    float: left;
+    overflow: hidden;
+    h2 {
+      font-weight: normal;
+    }
+    .count {
+      font-size: 12px;
+      color: #aaaba6;
+    }
+    .item {
+      margin-top: 20px;
+      overflow: hidden;
+      width: 100%;
+      .item-lf {
+        float: left;
+        .warning {
+          background-color: #5c87d9;
+          color: #fff;
+          border: 2px solid#5c87d9;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+        span {
+          font-size: 14px;
+          color: #aaaba6;
+        }
+      }
+      .item-rt {
+        line-height: 28px;
+        overflow: hidden;
+        float: right;
+        span {
+          float: left;
+          font-size: 14px;
+          color: #aaaba6;
+
+        }
+        .share {
+          margin-right: 20px;
+        }
+        .share-sina {
+          margin-right: 6px;
+          height: 31px;
+          width: 31px;
+          background: url("../image/share-sina.min.png")no-repeat;
+          background-position-y: -2px;
+        }
+        .share-wechat {
+          margin-right: 20px;
+          height: 31px;
+          width: 33px;
+          background: url("../image/share-wechat.min.png")no-repeat;
+          background-position-y: -2px;
+        }
+      }
+    }
+    .img {
+      width: 500px;
+      height: 324px;
+      margin: 0 auto;
+      margin-top: 30px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .content-detail {
+      margin-top: 60px;
+      img {
+        max-width: 100%;
+      }
+    }
+    .comment {
+      margin-top: 40px;
+      textarea {
+        margin-top: 10px;
+        border: 1px solid #a7c1c9;
+      }
+      button {
+        color: #fff;
+        margin-top: 10px;
+        float: right;
+        height: 30px;
+        width: 70px;
+        background-color: #5c87d9;
+        border-radius: 4px;
+      }
+    }
+    .comment-detail {
+      margin-top: 80px;
+      ul {
+        border-bottom: 1px solid #EEEEEE;
+        margin-top: 40px;
+        li {
+          overflow: hidden;
+          .touxiang {
+            line-height: 32px;
+            float: left;
+            img {
+              height: 28px;
+              width: 28px;
+              border-radius: 50%;
+            }
+          }
+          .name {
+            line-height: 32px;
+            margin-left: 20px;
+            float: left;
+          }
+          .time {
+            line-height: 32px;
+            float: right;
+          }
+        }
+        .comment-content {
+          margin-top: 20px;
+          line-height: 32px;
+          padding-left: 48px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//侧边栏
+.main-group .main-side {
+  width: $main-right;
+  float: right;
+  background-color: #fff;
+  .title {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    .title-item1 {
+      float: left;
+      line-height: 40px;
+    }
+    .title-item2 {
+      float: right;
+      line-height: 40px;
+      a {
+        color: #5c87d9;
+        font-size: 14px;
+      }
+    }
+  }
+  .img {
+    height: 132px;
+    width: 100%;
+    background: url("../image/l4.min.jpg");
+  }
+  .follow {
+    overflow: hidden;
+    height: 202px;
+    width: 100%;
+    .follow-left {
+      float: left;
+      height: 100%;
+      width: 210px;
+      .follow-item {
+        line-height: 54px;
+        height: 62px;
+        width: 100%;
+        background: url("../image/xuebi.min.png") no-repeat;
+        a {
+          margin-left: 80px;
+          color: #555555;
+          font-size: 14px;
+        }
+      }
+      .follow-item2 {
+        background-position-y: -68px;
+      }
+      .follow-item3 {
+        background-position-y: -136px;
+      }
+    }
+    .follow-right {
+      float: right;
+      height: 100%;
+      width: 146px;
+      .share {
+        img {
+          height: 85px;
+          width: 85px;
+          margin: 0 auto;
+          display: block;
+        }
+        div {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .hot {
+    height: 103px;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    .hot-article {
+      float: left;
+      width: 207px;
+      .article-footer {
+        margin-top: 12px;
+        span {
+          font-size: 12px;
+        }
+        .author {
+          margin-left: 20px;
+        }
+      }
+      a {
+        color: #555555;
+      }
+    }
+    .hotimg {
+      float: right;
+      img {
+        height: 70px;
+        width: 100px;
+      }
+    }
+  }
+}
+//底部栏
+.footerUp {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  box-sizing: border-box;
+  margin-top: 52px;
+  height: 102px;
+  width: 100%;
+  background-color: #555e67;
+  margin-bottom: 0;
+  overflow: hidden;
+  .logo {
+    float: left;
+    height: 100%;
+    width: 172px;
+    background: url("../image/logo.min.png")no-repeat;
+    background-size: 172px 57px;
+    margin-left: 65px;
+  }
+  .footer-detail {
+    margin-left: 80px;
+    float: left;
+    height: 100%;
+    .footer-detail-up {
+      width: 750px;
+      overflow: hidden;
+      ul {
+        float: left;
+        overflow: hidden;
+        li {
+          float: left;
+          a {
+            color: #a7c1c9;
+            font-size: 14px;
+          }
+        }
+        .spacer {
+          height: 14px;
+          width: 1px;
+          background-color: #a7c1c9;
+          margin: 6px 14px 14px;
+        }
+      }
+      div {
+        float: left;
+        margin-left: 50px;
+        span {
+          font-size: 14px;
+          color: #a7c1c9;
+          margin-left: 10px;
+        }
+        .wechat {
+          background: url("../image/weixin.min.png")no-repeat;
+          background-position-y: -3px;
+          height: 30px;
+          display: inline-block;
+          text-align: right;
+          width: 75px;
+        }
+        .sina {
+          background: url("../image/xinlang.min.png")no-repeat;
+          background-position-y: -3px;
+          height: 30px;
+          display: inline-block;
+          text-align: right;
+          width: 130px;
+        }
+      }
+    }
+    .footer-detail-down {
+      span {
+        font-size: 14px;
+        color: #a7c1c9;
+      }
+    }
+  }
+}
+.footerDown {
+  height: 60px;
+  width: 100%;
+  background-color: #383e44;
+  text-align: center;
+  font-size: 14px;
+  color: #c9c9c9;
+  line-height: 60px;
+}

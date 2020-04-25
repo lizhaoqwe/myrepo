@@ -1,0 +1,207 @@
+@import "constants";
+
+.main-group .main-side {
+  width: $main-right;
+  float: right;
+  background-color: #fff;
+  .title {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    .title-item1 {
+      float: left;
+      line-height: 40px;
+    }
+    .title-item2 {
+      float: right;
+      line-height: 40px;
+      a {
+        color: #5c87d9;
+        font-size: 14px;
+      }
+    }
+  }
+  .img {
+    height: 132px;
+    width: 100%;
+    background: url("../image/l4.min.jpg");
+  }
+  .follow {
+    overflow: hidden;
+    height: 202px;
+    width: 100%;
+    .follow-left {
+      float: left;
+      height: 100%;
+      width: 210px;
+      .follow-item {
+        line-height: 54px;
+        height: 62px;
+        width: 100%;
+        background: url("../image/xuebi.min.png") no-repeat;
+        a {
+          margin-left: 80px;
+          color: #555555;
+          font-size: 14px;
+        }
+      }
+      .follow-item2 {
+        background-position-y: -68px;
+      }
+      .follow-item3 {
+        background-position-y: -136px;
+      }
+    }
+    .follow-right {
+      float: right;
+      height: 100%;
+      width: 146px;
+      .share {
+        img {
+          height: 85px;
+          width: 85px;
+          margin: 0 auto;
+          display: block;
+        }
+        div {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .hot {
+    height: 103px;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    .hot-article {
+      float: left;
+      width: 207px;
+      .article-footer {
+        margin-top: 12px;
+        span {
+          font-size: 12px;
+        }
+        .author {
+          margin-left: 20px;
+        }
+      }
+      a {
+        color: #555555;
+      }
+    }
+    .hotimg {
+      float: right;
+      img {
+        height: 70px;
+        width: 100px;
+      }
+    }
+  }
+}
+.main-group {
+  width: $pageWidth;
+  margin: auto;
+  margin-top: 80px;
+  overflow: hidden;
+  .main {
+    background-color: #fff;
+    box-sizing: border-box;
+    float: left;
+    width: 798px;
+    overflow: hidden;
+    .search-group {
+      margin-top: 20px;
+      overflow: hidden;
+      .input {
+        height: 40px;
+        width: 80%;
+        float: left;
+        margin-left: 40px;
+        input {
+          border: 1px solid #5c87d9;
+          height: 100%;
+          width: 100%;
+          background-color: #fff;
+          padding-left: 20px;
+          box-sizing: border-box;
+        }
+      }
+      .button {
+        float: left;
+        height: 40px;
+        width: 10%;
+        button {
+          height: 100%;
+          width: 100%;
+          background-color: #5c87d9;
+          color: #fff;
+        }
+      }
+    }
+    .title {
+      margin-top: 20px;
+      height: 40px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .news-detail {
+      ul {
+        background-color: #fff;
+        overflow: hidden;
+        li {
+          float: left;
+          width: 798px;
+          height: 202px;
+          padding:20px;
+          box-sizing: border-box;
+          border-bottom: 1px solid #f2f2f2;
+          overflow: hidden;
+          .img {
+            float: left;
+            img {
+              height: 162px;
+              width: 225px;
+            }
+          }
+          .news-detail-item {
+            float: right;
+            width: 500px;
+            h2 {
+              font-weight: normal;
+              a {
+                color: #212121;
+              }
+            }
+            .item1 {
+              margin-top: 16px;
+              font-size: 14px;
+              color: #878787;
+              a {
+                color: #878787;
+              }
+            }
+            .news-footer {
+              font-size: 12px;
+              margin-top: 52px;
+              .time {
+                margin-left: 20px;
+              }
+              .author {
+                margin-left: 290px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

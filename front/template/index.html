@@ -1,0 +1,155 @@
+{% extends 'front_base.html' %}
+{% block title %}
+    首页
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}">
+    <script src="{% static 'js/header.min.js' %}"></script>
+	<script src="{% static 'js/loopimg.min.js' %}"></script>
+	<script src="{% static 'js/index.min.js' %}"></script>
+	<script src="{% static 'js/art-template/template-web.js' %}"></script>
+    <script id="news-item" type="text/html">
+    {% verbatim %}
+        {{ each newses news index }}
+             <li>
+                <div class="img">
+                    <a href="/news/{{ news.id }}">
+                        <img src="{{news.thumbnail}}" alt="">
+                    </a>
+                </div>
+                <div class="news-detail-item">
+                    <h2><a href="/news/{{ news.id }}">{{news.title}}</a></h2>
+                    <p class="item1"><a href="">{{news.desc}}</a></p>
+                    <p class="news-footer">
+                        <span>{{ news.category.name }}</span>
+                        <span class="time">{{ news.pub_time }}</span>
+                        <span class="author">{{ news.author.username }}</span>
+                    </p>
+                </div>
+            </li>
+        {{ /each }}
+    {% endverbatim %}
+    </script>
+{% endblock %}
+{% block content %}
+	<div class="main-group">
+		<div class="main">
+<!--			轮播图-->
+			<div class="banner-group">
+				<i class="icon-jiantou iconfont arrow arrow-left"></i>
+				<i class="icon-jiantou-copy iconfont arrow arrow-right"></i>
+				<ul class="bannerControl">
+
+				</ul>
+				<ul class="bannerUl">
+                    {% for banner in banners %}
+                    <li>
+                        <a href="{{ banner.link_to }}">
+                            <img src="{{banner.image_url}}" alt="">
+                        </a>
+                    </li>
+                    {% endfor %}
+				</ul>
+			</div>
+<!--			新闻导航栏-->
+			<div class="news-group">
+				<ul class="news">
+                    <li data-category="0">
+                        <a href="javascript:void(0)" class="item">未分类</a>
+                    </li>
+                    {% for category in categories %}
+                        <li data-category="{{ category.id }}">
+						    <a href="javascript:void(0)" class="item">{{category.name}}</a>
+					    </li>
+                    {% endfor %}
+				</ul>
+			</div>
+<!--			新闻栏-->
+			<div class="news-detail">
+				<ul class="news-detail-ul">
+					{% for article in articles %}
+					    <li>
+                            <div class="img">
+                                <a href="{% url 'news:news_detail' news_id=article.pk %}">
+                                    <img src="{{article.thumbnail}}" alt="">
+                                </a>
+                            </div>
+                            <div class="news-detail-item">
+                                <h2><a href="{% url 'news:news_detail' news_id=article.pk %}">{{article.title}}</a></h2>
+                                <p class="item1"><a href="">{{article.desc}}</a></p>
+                                <p class="news-footer">
+                                    <span>{{ article.category.name }}</span>
+                                    <span class="time">{{ article.pub_time | date:"Y/m/d H:i"}}</span>
+                                    <span class="author">{{ user.username }}</span>
+                                </p>
+                            </div>
+                        </li>
+					{% endfor %}
+				</ul>
+			</div>
+<!--			加载更多-->
+			<button class="more">加载更多</button>
+		</div>
+<!--侧边栏-->
+		<div class="main-side">
+			<div class="title">
+				<div class="title-item1">在线课堂</div>
+				<div class="title-item2"><a href="">更多</a></div>
+			</div>
+			<div class="img">
+
+			</div>
+			<div class="title">
+				<div class="title-item1">
+					关注我
+				</div>
+			</div>
+			<div class="follow">
+				<div class="follow-left">
+					<div class="follow-item follow-item1">
+						<a href="">
+							创业课堂
+						</a>
+					</div>
+					<div class="follow-item follow-item2">
+						<a href="">
+							创业课堂
+						</a>
+					</div>
+					<div class="follow-item follow-item3">
+						<a href="">
+							创业课堂
+						</a>
+					</div>
+				</div>
+				<div class="follow-right">
+					<div class="share">
+						<img src="{% static 'image/share.min.jpg' %}" alt="">
+						<div>扫码关注我</div>
+						<div>QQ</div>
+						<div>523059894</div>
+					</div>
+				</div>
+			</div>
+			<div class="title">
+				热门推荐
+			</div>
+			<div class="hot">
+				<div class="hot-article">
+					<h4><a href="">
+						王健林卖掉进军海外首个项目:17亿售伦敦...
+					</a></h4>
+					<div class="article-footer">
+						<span>深度报道</span>
+						<span class="author">{{user.username}}</span>
+						<span>04-04 18:45</span>
+					</div>
+
+				</div>
+				<div class="hotimg">
+					<img src="{% static 'image/l4.min.jpg' %}" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

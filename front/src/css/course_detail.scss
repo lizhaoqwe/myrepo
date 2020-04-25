@@ -1,0 +1,59 @@
+.course-detail-group {
+  width: 1170px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .buy-group {
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 37px;
+    .share {
+      line-height: 31px;
+      float: left;
+      overflow: hidden;
+      span {
+        float: left;
+      }
+      .sina {
+        margin-left: 20px;
+        height: 32px;
+        width: 31px;
+        background: url("../image/share-sina.min.png");
+        background-position-y: -2px;
+      }
+      .wechat {
+        margin-left: 10px;
+        height: 32px;
+        width: 33px;
+        background: url("../image/share-wechat.min.png");
+        background-position-y: -2px;
+      }
+    }
+    .buy {
+      float: right;
+      span {
+        float: left;
+        margin-left: 20px;
+      }
+      .price {
+        color: #f36269;
+      }
+      .buy-btn {
+        button {
+          background-color: coral;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .vidio {
+    height: 500px;
+    width: 100%;
+    background-color: pink;
+    margin-top: 20px;
+  }
+}

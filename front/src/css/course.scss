@@ -1,0 +1,89 @@
+body {
+  background-color: #f2f2f2;
+}
+//课程页面头部信息
+.course-group {
+  height: 60px;
+  width: 100%;
+  margin-top: 65px;
+  background-color: #fff;
+  box-shadow: 0 10px 5px rgba(0,0,0,0.1);
+  .course-header {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    .title {
+      float: left;
+      h2 {
+        line-height: 60px;
+        font-weight: normal;
+      }
+    }
+    .title-nav {
+      margin-left: 80px;
+      float: left;
+      ul {
+        overflow: hidden;
+        li {
+          line-height: 60px;
+          float: left;
+          margin-left: 60px;
+          a {
+            color: #878787;
+          }
+        }
+        li:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
+//课程页面内容部分
+.course {
+  width: 100%;
+  margin-top: 20px;
+  .course-detail {
+    width: 1170px;
+    margin: 0 auto;
+    ul {
+      overflow: hidden;
+      li {
+        float: left;
+        height: 300px;
+        width: 282px;
+        background-color: #fff;
+        margin-left: 10px;
+        margin-top: 20px;
+        .course-up {
+          img {
+            height: 150px;
+            width: 100%;
+          }
+        }
+        .course-down {
+          height: 125px;
+          width: 100%;
+          padding: 20px;
+          box-sizing: border-box;
+          .course2 {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #878787;
+          }
+          .price {
+            text-align: right;
+            margin-top: 43px;
+          }
+        }
+      }
+      li:hover {
+        cursor: pointer;
+        box-shadow: 0 10px 5px rgba(0,0,0,0.5);
+      }
+    }
+  }
+}

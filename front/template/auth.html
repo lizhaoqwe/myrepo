@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/init.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.min.css' %}">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1040617_7hdp04z7p73.css">
+    <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'js/auth.min.js' %}"></script>
+</head>
+<body>
+    <button class="test-btn">登录</button>
+    <div class="wrapper-group">
+        <div class="auth-group">
+            <div class="auth-header">
+                <span class="icon-baseline-close-px-copy iconfont close">
+
+                </span>
+            </div>
+            <div class="item">
+                <div class="item-left itemActive">
+                    请登录
+                </div>
+                <div class="item-right">
+                    立即注册
+                </div>
+            </div>
+            <ul class="auth">
+                <li class="login">
+                    <div class="input-auth">
+                        <input type="text" placeholder="手机号码" name="telephone">
+                    </div>
+                    <div class="input-auth">
+                        <input type="password" placeholder="密码" name="password">
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" name="remember"><div>记住我</div>
+                    </div>
+                    <div class="login-btn">
+                        <button>立即注册</button>
+                    </div>
+                </li>
+                <li class="register">
+                    <input type="text" name="telephone">
+                    <input type="text" name="username">
+                    <input type="text" name="code" class="code">
+                    <input type="password" name="password">
+                    <input type="password" name="re_password">
+                    <input type="text" name="message" class="message"><span>发送验证码</span>
+                    <button class="register-btn">立即注册</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

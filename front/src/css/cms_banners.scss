@@ -1,0 +1,64 @@
+.cms-header {
+  height: 50px;
+  overflow: hidden;
+  .button {
+    float: left;
+    button {
+      margin-top: 6px;
+      color: #fff;
+      background-color: #5c87d9;
+      height: 30px;
+      border-style: none;
+    }
+  }
+  .warning-content {
+    float: left;
+    margin-left: 20px;
+  }
+
+}
+
+.box-body {
+  .body-header {
+    line-height: 20px;
+    overflow: hidden;
+    .item1 {
+      float: left;
+    }
+    .close-icon {
+      float: right;
+    }
+  }
+  .body-loop {
+    overflow: hidden;
+    margin-top: 40px;
+    #addimg {
+      display: none;
+    }
+    .loop-img:hover {
+      cursor: pointer;
+    }
+    .loop-img {
+      float: left;
+      img {
+        height: 100px;
+        width: 250px;
+      }
+    }
+    .loop-content {
+      height: 100px;
+      float: left;
+      margin-left: 40px;
+      position: relative;
+      input {
+        height: 40px;
+        width: 500px;
+      }
+      .input-down {
+        position: absolute;
+        bottom: 0;
+      }
+
+    }
+  }
+}
